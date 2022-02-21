@@ -9,11 +9,11 @@ using Autodesk.Revit.Attributes;
 
 namespace RevitDataExtractor
 {
+    [TransactionAttribute(TransactionMode.ReadOnly)]
     public class CountPlumbingFixtures : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
-
             try
             {
                 //Get UI Document
@@ -33,7 +33,6 @@ namespace RevitDataExtractor
 
                 //Print results to dialog box
                 TaskDialog.Show("Plumbing Fixtures", string.Format("There are {0} plumbing fixtures in the model", plumbingFixtures.Count));
-
 
                 return Result.Succeeded;
             }

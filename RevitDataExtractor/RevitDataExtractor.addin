@@ -11,6 +11,6 @@
 		<Description>Count the number of plumbing fixtures in the model</Description>
 		<VendorId>LelandCurtis</VendorId>
 		<VendorDescription>Leland Curtis Personal Projects</VendorDescription>
-		<VisibilityMode>NotVisibleWhenNotActiveDocument</VisibilityMode>
+		<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
 	</AddIn>
 </RevitAddIns>
