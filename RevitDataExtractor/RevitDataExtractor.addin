@@ -6,9 +6,9 @@
 		<AddInId>
 			4C2B3A59-3749-48B1-9D74-1525174E1DC9
 		</AddInId>
-		<FullClassName>RevitDataExtractor.CountPlumbingFixtures</FullClassName>
-		<Text>CountPlumbingFixtures</Text>
-		<Description>Count the number of plumbing fixtures in the model</Description>
+		<FullClassName>RevitDataExtractor.ExtractPlumbingFixtureData</FullClassName>
+		<Text>ExtractPlumbingFixtureData</Text>
+		<Description>Extract data about plumbing fixtures and export to csv file</Description>
 		<VendorId>LelandCurtis</VendorId>
 		<VendorDescription>Leland Curtis Personal Projects</VendorDescription>
 		<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
