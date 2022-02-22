@@ -13,4 +13,18 @@
 		<VendorDescription>Leland Curtis Personal Projects</VendorDescription>
 		<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
 	</AddIn>
+
+	<AddIn Type="Command">
+		<Name>RevitDataExtractor</Name>
+		<Assembly>RevitDataExtractor.dll</Assembly>
+		<AddInId>
+			C164A9B8-869A-43AE-B651-D1245D3317DC
+		</AddInId>
+		<FullClassName>RevitDataExtractor.ExtractFloorData</FullClassName>
+		<Text>ExtractFloorData</Text>
+		<Description>Extract data about floors and export to csv file</Description>
+		<VendorId>LelandCurtis</VendorId>
+		<VendorDescription>Leland Curtis Personal Projects</VendorDescription>
+		<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
+	</AddIn>
 </RevitAddIns>

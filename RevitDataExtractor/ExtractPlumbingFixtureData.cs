@@ -58,12 +58,15 @@ namespace RevitDataExtractor
                 var familySymbols = families.Where(x => x.FamilyName == familyName);
                 var familySymbol = familySymbols.First();
 
+                //Get lement type to extract type parameters from
+                Element eleType = doc.GetElement(fixture.GetTypeId());
+                
                 //Get parameter values from familySymbol
                 string family = familySymbol.FamilyName;
-                string typeMark = fixture.LookupParameter("TypeMark").AsValueString();
-                string description = familySymbol.LookupParameter("Description").AsValueString();
+                string typeMark = eleType.get_Parameter(BuiltInParameter.ALL_MODEL_TYPE_MARK).AsValueString();
+                string description = eleType.LookupParameter("Description").AsValueString();
                 string type = fixture.LookupParameter("Type").AsValueString();
-                string manufacturer = familySymbol.LookupParameter("Manufacturer").AsValueString();
+                string manufacturer = eleType.LookupParameter("Manufacturer").AsValueString();
 
                 //Create new Plumbing Fixture object
                 PlumbingFixture plumbingFixture = new PlumbingFixture { Family = family, TypeMark = typeMark, Description = description, Type = type, Manufacturer = manufacturer, Count = count };
