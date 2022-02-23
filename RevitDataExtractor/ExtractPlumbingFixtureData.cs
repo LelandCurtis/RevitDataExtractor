@@ -46,7 +46,7 @@ namespace RevitDataExtractor
             var distinctFamilyNames = familyNames.Distinct();
 
             //Gather data for each unique family type
-            List<PlumbingFixture> plumbingFixturesData = new List<PlumbingFixture>();
+            List<PlumbingFixtureCollector> plumbingFixturesData = new List<PlumbingFixtureCollector>();
             foreach (var familyName in distinctFamilyNames)
             {
                 //Get count by isolating all instances of current family type
@@ -69,7 +69,7 @@ namespace RevitDataExtractor
                 string manufacturer = eleType.LookupParameter("Manufacturer").AsValueString();
 
                 //Create new Plumbing Fixture object
-                PlumbingFixture plumbingFixture = new PlumbingFixture { Family = family, TypeMark = typeMark, Description = description, Type = type, Manufacturer = manufacturer, Count = count };
+                PlumbingFixtureCollector plumbingFixture = new PlumbingFixtureCollector { Family = family, TypeMark = typeMark, Description = description, Type = type, Manufacturer = manufacturer, Count = count };
 
                 //Add hash to array
                 plumbingFixturesData.Add(plumbingFixture);

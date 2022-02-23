@@ -43,7 +43,7 @@ namespace RevitDataExtractor
             var distinctTypeNames = typeNames.Distinct();
 
             //Gather data for each unique family type
-            List<Floor> floorsData = new List<Floor>();
+            List<FloorCollector> floorsData = new List<FloorCollector>();
             foreach (var familyName in distinctTypeNames)
             {
                 //Get area by isolating all instances of current family type and summing area
@@ -66,7 +66,7 @@ namespace RevitDataExtractor
                 string type = floor.LookupParameter("Type").AsValueString();
 
                 //Create new floor object
-                Floor floorObject = new Floor { Family = family, TypeMark = typeMark, Type = type, Area = area , Description = description};
+                FloorCollector floorObject = new FloorCollector { Family = family, TypeMark = typeMark, Type = type, Area = area , Description = description};
 
                 //Add object to array
                 floorsData.Add(floorObject);

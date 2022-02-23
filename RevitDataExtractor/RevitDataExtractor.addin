@@ -27,4 +27,18 @@
 		<VendorDescription>Leland Curtis Personal Projects</VendorDescription>
 		<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
 	</AddIn>
+
+	<AddIn Type="Command">
+		<Name>RevitDataExtractor</Name>
+		<Assembly>RevitDataExtractor.dll</Assembly>
+		<AddInId>
+			5A7B875D-C5C4-46E3-A3E2-C8ED426AF9EC
+		</AddInId>
+		<FullClassName>RevitDataExtractor.ExtractExteriorWallData</FullClassName>
+		<Text>ExtractExteriorWallData</Text>
+		<Description>Extract data about exterior walls and export to csv file</Description>
+		<VendorId>LelandCurtis</VendorId>
+		<VendorDescription>Leland Curtis Personal Projects</VendorDescription>
+		<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
+	</AddIn>
 </RevitAddIns>
